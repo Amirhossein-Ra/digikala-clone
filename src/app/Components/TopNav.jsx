@@ -4,7 +4,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import { CiSearch } from "react-icons/ci";
 export default function TopNav() {
   return (
-    <div className=" flex items-center justify-between space-x-4 py-3 px-2">
+    <div className=" flex items-center justify-between space-x-4 py-3 px-2 pb-3">
       <div className="hidden sm:inline-flex  items-center space-x-3 mr-[400px]">
         <FiShoppingCart size={23} />
 

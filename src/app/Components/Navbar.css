@@ -1,0 +1,9 @@
+.categoryContainer {
+  display: none;
+}
+.categoryContainer:hover {
+  display: flex;
+}
+.category:hover ~ .categoryContainer {
+  display: flex;
+}
