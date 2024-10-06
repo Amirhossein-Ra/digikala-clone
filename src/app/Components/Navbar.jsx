@@ -3,7 +3,11 @@ import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { IoLocationOutline, IoReorderThree } from "react-icons/io5";
 import { BiSolidDiscount } from "react-icons/bi";
-import { FaBasketShopping, FaFireFlameCurved } from "react-icons/fa6";
+import {
+  FaAngleLeft,
+  FaBasketShopping,
+  FaFireFlameCurved,
+} from "react-icons/fa6";
 import { TbDiscount } from "react-icons/tb";
 import { CiMobile1 } from "react-icons/ci";
 import { useDispatch, useSelector } from "react-redux";
@@ -146,18 +150,22 @@ export default function Navbar() {
         </div>
         <div className="categoryContainer absolute right-3 top-[15%]  w-1/2 h-[400px] ">
           <div className="flex w-full h-full">
-            <div className="catgoryItems flex flex-col items-end justify-between w-4/5 h-full bg-white overflow-scroll ">
+            <div className="catgoryItems flex flex-col items-end justify-between w-4/5 h-full bg-white overflow-y-scroll">
               <a
                 className="text-sm text-blue-400 font-semibold mr-4 mt-4"
                 href=""
               >
                 همه محصولات {Product.CategoryName}
               </a>
-              <div className="flex flex-col justify-between items-center ">
+              <div className="flex flex-row justify-around items-start flex-wrap">
                 {Product.CategoryItems.map((item) => {
                   return (
-                    <div className="flex flex-col justify-between items-end flex-wrap">
-                      <a className="font-bold" href="">
+                    <div className="flex flex-col justify-between items-center flex-wrap">
+                      <a
+                        className="flex items-center pr-1 font-bold border-r-2 border-red-600"
+                        href=""
+                      >
+                        <FaAngleLeft className="pt-1" />
                         {item.Title}
                       </a>
                       <div className="flex flex-col justify-center items-center">
@@ -170,9 +178,8 @@ export default function Navbar() {
                 })}
               </div>
             </div>
-            <div className="flex flex-col justify-between items-center categoryNames w-1/5 h-full bg-gray-300 overflow-scroll">
+            <div className="flex flex-col justify-between items-center categoryNames w-1/5 h-full bg-gray-300 overflow-scroll scrollbar-none ">
               {Category.map((elem) => {
-                console.log(elem.id);
                 return (
                   <div
                     onMouseOver={() => hoverEffect(elem.id)}
