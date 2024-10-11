@@ -148,7 +148,7 @@ export default function Navbar() {
             <IoReorderThree className="text-black font-bold" size={20} />
           </div>
         </div>
-        <div className="categoryContainer absolute right-3 top-[15%]  w-1/2 h-[400px] ">
+        <div className="categoryContainer absolute right-3 top-[15%]  w-1/2 h-[400px] z-50">
           <div className="flex w-full h-full">
             <div className="catgoryItems flex flex-col items-end justify-between w-4/5 h-full bg-white overflow-y-scroll">
               <a
